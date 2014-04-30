@@ -54,7 +54,7 @@ module Setler
     end
 
     def self.all_settings
-      @@defaults.merge(Hash[thing_scoped.all.collect{ |s| [s.var, s.value] }])
+      @@defaults.merge(Hash[thing_scoped.collect{ |s| [s.var, s.value] }])
     end
 
     def self.thing_scoped
