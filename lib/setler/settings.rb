@@ -8,7 +8,7 @@ module Setler
     cattr_accessor :defaults
     @@defaults = {}.with_indifferent_access
 
-    attr_accessible :var, :value
+    attr_accessible :var, :value, :thing_type, :thing_id
 
     # Get and Set variables when the calling method is the variable name
     def self.method_missing(method, *args, &block)
